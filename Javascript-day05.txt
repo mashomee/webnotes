@@ -1,0 +1,4 @@
+	1. Try catch throw
+	Try{}catch(err){err.name, err.message}
+	
+throw可以抛出任何对象

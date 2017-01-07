@@ -1,0 +1,67 @@
+html
+
+2017Äê1ÔÂ1ÈÕ
+7:05
+
+	1. Html is a set of markup tags, used to describe web pages.
+	2. Html documents is called web pages.  Web browsers is used to display html documents as web pages.  Markup tags is used to interpret the content of the page.
+	3. Html documents are defined by html elements.
+	4. Html elements are a pair of start /opening tag and end/closing tag.
+	5. Html element content are everything between start tag and end tag.
+	6. Html element can be empty, then start tag is also end tag.
+	7. Html element can have attributes. They reside in start tag, and come in name/value pairs like [name='value'].
+	8. CSS styling can be added in the following three way:
+		a. In a separate style sheet file, normally .css files
+		b. In the "style" element in the html head element.
+		c. In the style attribute in a single html element.
+	9. Html tags.
+		a. Basic tags
+			i. <html></html>
+			ii. <head></head>
+			iii. <body></body>
+			iv. <p></p>
+			v. <h1></h1><h2></h2><h3></h3><h4></h4><h5></h5><h6></h6>
+			vi. <br/> start a new line
+			vii. <hr/> draw a visiable line
+			viii. <!-- comment tag are like this -->
+		b. Text formatting tags
+			i. <b></b>
+			ii. <i></i>
+			iii. <abbr> </abbr>
+			iv. <acronym></acronym>
+			v. <blockquote></blockquote>
+			vi. <q></q>
+			vii. <cite></cite>
+			viii. <dfn></dfn>
+		c. Links and Navigation
+			i. anchor <a href='' target=''> anchor contents </a>
+		d. Images
+			i. <img src='' alt='' width='' height='' />
+		e. Tables
+			i. <tr></tr> table row
+			ii. <td></td> table data ie. Table Data
+			iii. <table border='3'> </table>
+			iv. <th></th> table head
+			v. <caption></caption> <colgroup></colgroup><col/>
+			<thead></thead><tbody></tbody><tfoot></tfoot>
+		f. Lists
+			i. <ul> unordered list</ul> <li></li>
+			ii. <ol>ordered list</ol> <li>list item</li>
+			iii. <dl>defination list</dl><dt>defination title</dt><dd>defination description</dd>
+		g. Forms
+			i. <form action='' method=''></form>
+			ii. <input type='text' name='name' />
+			<input type='password' name='password' />
+			<input type='radio' name='radio' value='radiovalue' />
+			<input type='checkbox' name='checkbox' value='checkboxvalue' />
+			< input type='submit' value='Submit' />
+		h. Html5 elements/tags: canvas
+	10. CSS in html
+	In element style, it can be used as element attribute in opening tag.
+	It is style list separated by ';' of one style elemenets pairs separated by comma ':'.
+	A. Background 
+	<p style='background-color:red'></p>
+	B. Font¡¢font color¡¢font size
+	<p style='font-family:arial;color:red;font-size:23px'></p>
+	C. Text alignment
+	<p style='text-align:center'></p>
