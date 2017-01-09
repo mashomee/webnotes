@@ -7,3 +7,6 @@
        * 标签script的type属性没有设置正确，正确的是text/javascript
        * js文件的编码有问题导致载入时乱码,可以设置标签的script charset属性为例如 charset='UTF-8'
        * js文件的路径不正确导致找不到文件。
+    4. with(object instance){}关键字
+       使用with可以在紧随的代码区块上引用此object的属性,直接使用属性名称即可,但是不能新建属性
+    5. 在form的提交前事件处理中,onsubmit()只要返回false就会中断处理
