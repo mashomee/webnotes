@@ -1,0 +1,114 @@
+#+Title: 字符串 日期 
+
+* 字符串
+** length
+  #+BEGIN_SRC javascript
+  alert(''.length)
+  #+END_SRC
+** style
+  #+BEGIN_SRC javascript
+  alert('你好'.big())
+  alert('你好'.small())
+  alert('你好'.bold())
+  alert('你好'.italics())
+  alert('你好'.strike())
+  alert('你好'.fontcolor('green'))
+  alert('你好'.fontsize(18))
+  alert('你好'.sub())
+  alert('你好'.sup())
+  alert('你好'.link('http://www.w3school.com.cn'))
+  #+END_SRC
+** indexOf索引，返回一个数字
+  #+BEGIN_SRC javascript
+         var txt = "徐承恩a很好！"
+         alert(txt.indexOf('!'))
+         alert(txt.indexOf('徐'))
+         alert(txt.indexOf('a'))
+         alert(txt.indexOf('承恩'))
+  #+END_SRC
+** match返回匹配的字符串
+   #+BEGIN_SRC javascript
+         var str = 'Hello World!';
+         alert(str.match('ello'))
+         alert(str.match('Wor'))
+   #+END_SRC
+** replace 替换字符串， 返回替换后的整个字符串:是的
+   #+BEGIN_SRC javascript
+         var str = '徐承恩 是 个 大SB';
+         alert(str.replace(/徐承恩/, '你'))
+         alert(str.replace(/ /, '&nbsp'))
+         alert(str.replaceAll(/ /, '&nbsp'))
+         alert(str.replace(/SB/, '狗熊！'))
+   #+END_SRC
+   好像只会替换第一
+** 当使用utf编码的时候，汉字和英文字母都是一个字符，包括索引和长度
+* 日期
+** 获取当前日期
+   #+BEGIN_SRC javascript
+   alert(new Date());
+   #+END_SRC
+** 获取unix时间戳（毫秒）
+   #+BEGIN_SRC javascript
+     alert(new Date().getTime())
+   #+END_SRC
+** 设置时间，默认没有设置到的位置从当前时间的位置上获取
+   #+BEGIN_SRC javascript
+         var date = new Date();
+         date.setFullYear(2018,1,1,)
+   #+END_SRC
+   必须先声明，再设置？？？？
+** 获取星期几，从周日开始算，从0开始算
+   #+BEGIN_SRC javascript
+         var arr = [
+             'Sunday',
+             'Monday',
+             'Tuesday',
+             'Wednesday',
+             'Thursday',
+             'Friday',
+             'Saturday'
+         ];
+
+         for(var i = 1; i< 10; ++i)
+         {
+             var date = new Date();
+             date.setFullYear(2018,1,i);
+             var weekday = arr[date.getDay()];
+             document.write(date.toString() + ' is ' + weekday + '<br/>');
+         }
+   #+END_SRC
+** 定制时钟：利用Date和定时器
+   #+BEGIN_SRC javascript
+       <body>
+        <h1 id="clock">时钟</h1>
+        <script>
+         document.getElementsByTagName('body')[0].onload = function(){
+             try
+             {
+                 setTimeout(function checkTime(){
+                     var today = new Date();
+                     document.getElementById('clock').innerHTML
+                     =
+                     "" +
+                     (today.getHours() >= 10 ? today.getHours() : '0' + today.getHours()) +
+                     ":" +
+                     (today.getMinutes() >= 10 ? today.getMinutes() : '0' + today.getMinutes()) +
+                     ":" +
+                    (today.getSeconds() >= 10 ? today.getSeconds() : '0' + today.getSeconds())
+                     setTimeout(checkTime, 500);
+                 }
+         ,
+                            500
+                 );
+             }
+             catch(error)
+             {
+                 alert(error.name + error.message);
+             }
+         }
+   #+END_SRC
+   在钟表中，定时器函数setTimeout的嵌套和setInterval的效果类似
+** 操作日期
+*** 日期上可以根据天来做加减法，此时如果导致改变了月份和年，则日期函数会自动转换
+*** 日期类型上可以做比较操作
+** 把日期当做数字来运算要记住序号从0开始

@@ -1,4 +1,4 @@
-#+title : Number内置对象
+#+title: Number内置对象
 
 * 只有一种数字类型，三种表示方式
   - 无小数点 var i = 0
@@ -12,3 +12,24 @@
   - 数字前加0为8进制
   - 数字前加0x为16进制
 * 数字属性和方法如下
+  #+begin_src javascript
+
+         alert(Number().toFixed)
+         
+         alert(Number().toPrecision);
+         alert(Number().toString());alert(Number().toExponential(30))
+         alert(new Number(1).toExponential());
+         alert(new Number(1).toFixed());
+         alert(new Number(1).toPrecision());
+         alert(new Number(1).toString());
+         alert('valueOf(new Number(3)):' + new Number(3).valueOf());
+         alert(Number.MAX_VALUE);
+         alert(Number.MIN_VALUE);
+         alert(Number.NEGATIVE_INFINITY);
+         alert(Number.POSITIVE_INFINITY);
+         alert(Number.NaN);
+         alert(Number.prototype);
+         alert( Number.constructor);
+
+  #+end_src
+  似乎：必须有对象实例才能调用方法，而用内置类型的名称就可以调用属性
