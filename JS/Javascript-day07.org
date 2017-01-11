@@ -1,0 +1,27 @@
+#+title: 使用js删除和添加domTree节点
+
+* 添加
+  首先是createElement,createTextNode,然后是appendChild到通过document.getElementById、document.getElementsByTagName
+  、document.getElementsByClassName获取到的元素节点上
+* 删除
+  首先是通过三个查找方法找到此元素，然后通过此元素的父节点的removeChild方法删除掉此节点
+* 遍历js数组
+  使用for/in循环遍历数组的时候，由于js数组的序号元素string类型所以可以通过isNaN(parseInt)来过滤掉非数字字符串的数组元素，
+  然后再根据自己的条件过滤掉不符合条件的元素，如下面的例子.
+  如果是遍历数组删除的时候，由于每删掉一个元素可能删掉元素的index就被破坏了，所以要一直删除第0个元素
+#+begin_src javascript
+function removep()
+         {
+             var paras = document.getElementsByClassName('toBeRemoved');
+             for(var nth in paras)
+             {
+                 if(!isNaN(parseInt(nth)))//根据js数组特性过滤掉
+                 {
+                     if(paras[0].className == 'toBeRemoved')//根据自己的条件过滤掉
+                     {
+                         paras[0].parentNode.removeChild(paras[0]);//删除第0个元素
+                     }
+                 }
+             }
+         }
+#+end_src 

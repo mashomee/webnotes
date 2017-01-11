@@ -1,0 +1,42 @@
+#+title : javascript 内置对象和自定义对象
+
+对象是有属性和方法的特殊数据类型
+
+* 内置对象
+** 设置和获取对象的属性
+   setter: objectName.propertyName= new Value;
+   getter: objectName.propertyName is old Value;
+** 设置获取对象的方法
+   setter: objectName.methodName = new function;
+   getter: objectName.methodName() call the function;
+* 创建对象
+** 使用literals创建对象
+#+begin_src javascript
+         var a = {"1": 1, "2":2, "func": function(){alert('hello'); return 'pp'}};
+#+end_src
+** 使用构造函数来创建对象
+   可以使用所有对象的基类的构造函数Object.object(),也可以使用自定义的构造函数，就是普通的函数
+   使用基类/原型的构造函数
+#+begin_src javascript
+         var person = new Object();
+         person.firstname = '徐';
+         person.lastname = '承恩';
+         person.age = 29;
+         person.address = '山东滕州';
+         person.eyecolor = '棕色';
+#+end_src
+* 可以随意随时给对象添加属性和方法
+#+begin_src javascript
+         function Person(firstname, lastname, age, eyecolor)
+         {
+             this.firstname = firstname;
+             this.lastname = lastname;
+             this.age = age;
+             this.eyecolor = eyecolor;
+             this.changeName = function(name)
+             {
+                 this.lastname = name;
+             }
+         }
+#+end_src javascript
+   在对象内部没有使用this的话，变量也是只指示为全局变量
