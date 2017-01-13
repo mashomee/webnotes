@@ -1,0 +1,37 @@
+#+title: BOM
+
+* window
+  所有Javascript全局对象、全局函数、全局变量均自动成为window对象的属性之一
+  #+BEGIN_ASCII
+  window.document.getElementById = document.getElementById
+  #+END_ASCII
+  全局变量是window的属性，全局函数是window的方法
+  #+BEGIN_SRC javascript
+  <!doctype html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    </head>
+    <body>
+        <h1 id ="popup" onmouseover="popup()" onmouseleave="closepop()">来，把鼠标移过来</h1>
+        <script>
+         function popup()
+         {
+             var h = window.innerWidth - 30;
+             var w = window.innerHeight - 30 ;
+             x = window.open("", "", 'width=100,height=100');
+             x.resizeTo(w,h);
+             x.moveTo(0,0);
+             var doc = document.getElementsByTagName('html')[0].innerHTML;
+             x.document.write(doc);
+         }
+
+         function closepop()
+         {
+             alert('马上关闭！！！！')
+             x.close();
+         }
+        </script>
+    </body>
+</html>
+  #+END_SRC
