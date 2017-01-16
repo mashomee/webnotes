@@ -1,4 +1,4 @@
-#+title: BOM
+#+title: BOM - window
 
 * window
   所有Javascript全局对象、全局函数、全局变量均自动成为window对象的属性之一
@@ -35,3 +35,29 @@
     </body>
 </html>
   #+END_SRC
+* window的属性，可以不使用window.来引用
+** screen
+   返回访问者屏幕的宽度，以像素计，减去界面特性，比如桌面的任务栏
+** location
+   getter返回当前页面的url地址，setter用于重定向到新的页面。
+   - location.hostname
+   - loation.port
+   - location.pathname
+   - location.protocal
+   - location.assign() 用于加载新的文档
+   - location.href返回整个url即protocol + hostname + port + pathname
+** history
+   - history.back()
+   - history.forward()
+** navigator
+   用于获取使用者的浏览器和操作系统等信息,信息不可靠，因为此信息可被更改
+   #+begin_src text
+   user uses the navigator to explore the internet，now at location， more locaton is history，navigator has window and screen
+   #+end_src
+* window的常用方法，可以不使用window来引用
+** alert
+** confirm
+** prompt
+** clearTimeout(setTimeout(function(){}, 3000))
+** document.cookie
+   alert(typeof(document.cookie)) == string
