@@ -1,0 +1,29 @@
+* HTML
+  + Annotates content
+  + Define document structrue
+
+* keep track sites
+  + http://www.w3.org/TR/html5 proposals standards
+  + http://caniuse.com feature investigation
+  + https://validator.w3.org validation
+  + https://www.w3schools.com/browsers/default.asp browser stat resourcewww
+
+* anatomy of an HTML tag
+  TAG = <ELEMENT> | </ELEMNT> |<ELEMENT />(SELF CLOSING)
+  CONTENT
+  ATRR= NAME="VALUE" in openning tag
+  WITHOUT ANY CONTENT= MUST USE INDIVIDUAL OPENNING and CLOSING TAG LIKE <p></p>
+* bare minimum html file : doc-struct-before.html
+* html rendered sequentially from top to bottom
+* html elements type
+** BLOCK-LEVEL elements
+   - Render to begin on a new line(by default can be changed by CSS)
+   - May contain inline or other block-level elements
+   - Roughly Flow Content in html5
+** INLINE elements
+   - Render on the same line (by default can be changed by CSS ?)
+   - May only contain other inline elements
+   - Roughly Prasing Content in html5
+** USEFUL with existing CSS RULES
+   - <div> basic block level elements
+   - <span> super inline level elements
