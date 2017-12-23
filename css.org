@@ -1,0 +1,76 @@
+* CSS PURPOSE
+  1. Control style
+  2. Control layout
+  3. Control Multiple Web pages all at once.
+* CSS RULE ANATOMY
+  - selector { declaration; declaration; ...}
+  - declaration = property : value, value, ... ;
+* stylessheet [[file:css-rule.html][example]]
+  one more more css rules
+* selectors [[file:simple-selectors.html][example]]
+** element 
+   - just use html element name, don't change the html content
+** class
+   - dot className to define a class
+   - specify the html element with class property = className to use a class,
+     can use multiple class just separated by space like class="a b"
+** id
+   - # idName to define a id
+   - specify the html elemnt with id property = idName to use a id
+** group selectors
+   separated by comma(,) in a selector postion of a css rule
+* selectors combination
+** MOST GENERAL selector can be any simple selector
+*** element with class selector( selector.class)
+*** Child(direct)selector( selector > selector )
+*** Descendent selector( selector selector)
+** other combination
+*** Adjacent sibling selector (selector + selector)
+*** General sibling selector (selector ~ selector)
+* Pseudo-class selectors [[file:pseudo-class.html][example]]
+** dynamic state class
+   + state like a:visited specify the style when the selected in that state
+   + action like a:hover specify the selected's style when action happened
+** seqencial class
+   + nth-child usually used in descendent selector child parts
+** other notes
+   - block-level elements tries to take up as much horizontal space 
+   as its containing element will allow
+* style placement
+** inline style great for quick testing
+   just same as id selector style
+** external styles most reusable
+   for consistent look in a entire website 
+** head styles for one page to overides external styles
+
+* style conficts resolvement aka. cascading algorithm
+** origin for each property
+   - external styles are declared where they are linked
+   - html renders from top to bottom sequentially
+   - last declared overides before
+** merge for different property
+   gather as more property as possible
+** inheritance properties from DOM tree parents 
+   for those who don't have a property
+** specificity
+   (!important) > inline style > id selector style > class selector style >  how many elements selector
+
+* text style
+** font-size
+   - px: pixel absolute size override
+   - em: eques size of "m" in used font, relative size accumulate
+   - %: percent , relative size accumulate
+* BOX model for layout
+** size property of box-sizing:border-box default is content box
+   - it is not inherited
+   - use star selector * to set it for all elements in a page
+   - prefered box-sizing:border-box to set the border-width
+** margin includes border includes padding includes content
+   - BUT margin doesn't within the element size, just the border padding and content
+   - margin JUST define how far other element should be pushed away
+** margin algorithm
+   - left and right are aumulative
+   - upper and down are merged,larger margin wins
+** overflow property
+* CSS RESETTING universal selector aka. star selector
+

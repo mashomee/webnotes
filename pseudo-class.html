@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+	<meta charset="utf-8" >
+	<title> block-level width and pseudo-class selectors</title>
+	<style>
+	 body > div, body > span{
+	     background-color: blue;
+	     color:red;
+	     opacity: .8;
+	 }
+	 a:hover div:nth-child(5){
+	     font-size: 24px;
+	 }
+	 #title:hover ~  a div:nth-child(4)
+	 {
+	     background: black;
+	 }
+	</style>
+    </head>
+    <body>
+	<h1 id="title">block-level width and pseudo-class selectors</h1>
+	<div>Hello</div>
+	<span>World!</span>
+	<a>
+	    <div>Div 1</div>
+	    <div>Div 2</div>
+	    <div>Div 3</div>
+	    <div>Div 4</div>
+	    <div>Div 5</div>
+	    <div>Div 6</div>
+	    <div>Div 7</div>
+	</a>
+    </body>
+</html>

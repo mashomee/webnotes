@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> character entity reference agendas </title>
+  </head>
+  <body>
+    <h1>character entity reference agendas</h1>
+    <div>
+      agendas
+      <ul>
+	<li> avoid render issuse
+	  <p>
+	  <code>
+	    "; <more is <less> "
+			 </code>
+	  </p>
+	  SHOULD BE
+	  <p>
+	    &quot; &lt;more is &lt;less&gt; &quot;
+	  <p>
+	</li>
+	<li> safe guard charecter about encodings</li>
+	<li> provide character not available on a keyboard
+	  <p>
+	    @Copyright
+	  </p>
+	  SHOULD BE
+	  <p>
+	    &copy;
+	  </p>
+	  </li>
+      </ul>
+    </div>
+  </body>
+</html>

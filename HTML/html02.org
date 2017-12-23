@@ -7,14 +7,14 @@
   + http://caniuse.com feature investigation
   + https://validator.w3.org validation
   + https://www.w3schools.com/browsers/default.asp browser stat resourcewww
-
+  + https://ClearlyDecoded.com teacher
 * anatomy of an HTML tag
   TAG = <ELEMENT> | </ELEMNT> |<ELEMENT />(SELF CLOSING)
   CONTENT
   ATRR= NAME="VALUE" in openning tag
   WITHOUT ANY CONTENT= MUST USE INDIVIDUAL OPENNING and CLOSING TAG LIKE <p></p>
-* bare minimum html file : doc-struct-before.html
-* html rendered sequentially from top to bottom
+* bare minimum html file : [[file:doc-struct-before.html][example]]
+* html rendered sequentially from top to bottom 
 * html elements type
 ** BLOCK-LEVEL elements
    - Render to begin on a new line(by default can be changed by CSS)
@@ -27,3 +27,46 @@
 ** USEFUL with existing CSS RULES
    - <div> basic block level elements
    - <span> super inline level elements
+** [[file:div-and-span.html][example]]
+* semantic html element
+  element that implies some meaning to the content,help human or machine understand
+  the meaning of the content by a semantic tags.
+  - machine may use this to attach stylesheet
+  - human understand the structrue better
+  - BUT shoundn't use it for style but just structure
+** TAGS
+   - Heading elements [[file:semantic-headings.html][headings]]
+   - More semantics elements [[file:more-semantics.html][more]]
+     these html5 tags are just like =div=, just that they have implied meanings.
+* lists for group structrue
+** [[file:list-for-group-structure.html][example]]
+   - ul : unordered list, only li for list item is allowed in there
+   - ol : ul but ordered
+* Character Entity Reference
+  tell browser not to inteprete the symbol as html elements but just contents
+  - =<= : =&lt=;
+  - =>= : =&gt=;
+  - =&= : =&amp=;
+  - copyright symbol : =&copy=;
+  - =&nbsp= : just for non-breakable, not for multiple spaces.
+    multiple space should use a span with a left margin
+  - =&quot= : for "" in multple encodings
+** agendas [[file:character-entity-reference.html][example]]
+*** avoid render issues such as =&lt;=
+*** safeguard agaist more limited character encoding such as =&quot;=
+*** provide characters not available on a keyboard such as =&copy;=
+* Links between pages and pages content
+  - =a= : archor
+  - =href= : hyperlink refercen
+  - =title= : for screen reading
+  - =target= : for open a new window or a new tab for the link
+** internal links
+   use =#= before element id to construct a href
+** external links
+   use procotal scheme such as =http= to begin construct the href
+** other files int the site
+   the back link
+** [[file:links.html][example]]
+* Images
+  use witdh and height whenever possible to safeguard layouts
+** [[file:image.html][example]]
